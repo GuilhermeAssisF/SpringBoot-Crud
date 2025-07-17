@@ -27,13 +27,12 @@ public class UserController {
 	@Autowired 
 	AddressRepository addressRepository;
 	
+	// No arquivo UserController.java
 	@GetMapping("/users")
 	public String users(Model model) {
 		List<User> users = userRepository.findAll();
-		
 		model.addAttribute("usuarios", users);
-		
-		return "index.html";
+		return "users.html"; // Mude aqui
 	}
 	
 	@GetMapping("/users/form")
@@ -58,6 +57,7 @@ public class UserController {
 		
 		return "redirect:/users";
 	}
+
 	
 	@GetMapping("/users/update/{id}")
 	public String userUpdate(@PathVariable 
@@ -75,7 +75,7 @@ public class UserController {
 		return "user_form.html";
 	}
 	
-	@GetMapping("/users/delete/{id}")
+	@GetMapping("/users/delete/{id}") //  <- AQUI ESTAVA @PostMapping
 	public String userDelete(@PathVariable() 
                              int id) {
 		
@@ -89,4 +89,5 @@ public class UserController {
 		
 		return "redirect:/users";
 	}
+
 }

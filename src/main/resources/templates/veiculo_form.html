@@ -1,10 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
+    <div th:replace="~{cabecalho :: head}"></div>
+    <title>Formulário do Veículo</title>
 </head>
 <body>
+<div class="container m-2">
+    <div class="offset-md-4">
+        <h2>Veículo</h2>
+        <form action="#" method="POST" th:action="@{/veiculos/new}" th:object="${veiculo}">
+            <input type="hidden" id="id" th:field="*{id}">
 
+            <span th:if="${#fields.hasErrors('placa')}" th:errors="*{placa}" class="text-danger"></span><br/>
+            <input type="text" id="placa" th:field="*{placa}" class="form_control mb-3 col-8" placeholder="Placa">
+
+            <br/>
+            <span th:if="${#fields.hasErrors('marca')}" th:errors="*{marca}" class="text-danger"></span><br/>
+            <input type="text" id="marca" th:field="*{marca}" class="form_control mb-3 col-8" placeholder="Marca">
+
+            <br/>
+            <span th:if="${#fields.hasErrors('modelo')}" th:errors="*{modelo}" class="text-danger"></span><br/>
+            <input type="text" id="modelo" th:field="*{modelo}" class="form_control mb-3 col-8" placeholder="Modelo">
+
+            <br/>
+            <span th:if="${#fields.hasErrors('anoFabricacao')}" th:errors="*{anoFabricacao}" class="text-danger"></span><br/>
+            <input type="number" id="anoFabricacao" th:field="*{anoFabricacao}" class="form_control mb-3 col-8" placeholder="Ano de Fabricação">
+            
+            <br/>
+            <span th:if="${#fields.hasErrors('motorista')}" th:errors="*{motorista}" class="text-danger"></span><br/>
+            <select th:field="*{motorista}" class="form-control mb-3 col-8">
+                <option th:each="motorista : ${motoristas}" th:value="${motorista.id}" th:text="${motorista.nome}"></option>
+            </select>
+
+            <br/>
+            <button type="submit" class="btn btn-primary col-2">Salvar</button>
+        </form>
+    </div>
+</div>
 </body>
 </html>

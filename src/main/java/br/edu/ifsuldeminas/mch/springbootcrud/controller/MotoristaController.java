@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+ 
 
 import java.util.List;
 import java.util.Optional;
@@ -26,8 +27,9 @@ public class MotoristaController {
     public String listarMotoristas(Model model) {
         List<Motorista> motoristas = motoristaRepository.findAll();
         model.addAttribute("motoristas", motoristas);
-        return "motoristas";
+        return "motorista"; // <-- CORREÇÃO AQUI
     }
+
 
     @GetMapping("/motoristas/form")
     public String exibirFormularioMotorista(@ModelAttribute("motorista") Motorista motorista) {

@@ -30,7 +30,7 @@ public class VeiculoController {
     public String veiculos(Model model) {
         List<Veiculo> veiculos = veiculoRepository.findAll();
         model.addAttribute("veiculos", veiculos);
-        return "veiculos";
+        return "veiculo";
     }
 
     @GetMapping("/veiculos/form")
