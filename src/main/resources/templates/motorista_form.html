@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:replace="~{cabecalho :: head}"></div>
+    <title>Formulário do Motorista</title>
+</head>
+<body>
+<div class="container m-2">
+    <div class="offset-md-4">
+        <h2>Motorista</h2>
+        <form action="#" method="POST" th:action="@{/motoristas/new}" th:object="${motorista}">
+            <input type="hidden" id="id" th:field="*{id}">
+
+            <span th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}" class="text-danger"></span><br/>
+            <input type="text" id="nome" th:field="*{nome}" class="form_control mb-3 col-8" placeholder="Nome">
+
+            <br/>
+            <span th:if="${#fields.hasErrors('cpf')}" th:errors="*{cpf}" class="text-danger"></span><br/>
+            <input type="text" id="cpf" th:field="*{cpf}" class="form_control mb-3 col-8" placeholder="CPF">
+
+            <br/>
+            <span th:if="${#fields.hasErrors('cnh')}" th:errors="*{cnh}" class="text-danger"></span><br/>
+            <input type="text" id="cnh" th:field="*{cnh}" class="form_control mb-3 col-8" placeholder="CNH">
+
+            <br/>
+            <span th:if="${#fields.hasErrors('dataNascimento')}" th:errors="*{dataNascimento}" class="text-danger"></span><br/>
+            <input type="date" id="dataNascimento" th:field="*{dataNascimento}" class="form_control mb-3 col-8" placeholder="Data de Nascimento">
+
+            <br/>
+            <button type="submit" class="btn btn-primary col-2">Salvar</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
+
+

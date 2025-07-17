@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <div th:replace="~{cabecalho :: head}"></div>
+    <title>Gerenciar Motoristas</title>
+</head>
+<body>
+<div class="container my-3">
+    <a th:href="@{/}" class="btn btn-secondary mb-3">Voltar ao Início</a>
+    <h1>Motoristas</h1>
+    <div>
+        <a th:href="@{/motoristas/form}" class="btn btn-primary mb-3 float-right">Adicionar Motorista</a>
+    </div>
+    <table class="table table-striped table-responsive-md">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Nome</th>
+            <th>CPF</th>
+            <th>CNH</th>
+            <th>Data de Nascimento</th>
+            <th>Ações</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="motorista : ${motoristas}">
+            <td th:text="${motorista.id}"></td>
+            <td th:text="${motorista.nome}"></td>
+            <td th:text="${motorista.cpf}"></td>
+            <td th:text="${motorista.cnh}"></td>
+            <td th:text="${#temporals.format(motorista.dataNascimento, 'dd/MM/yyyy')}"></td>
+            <td>
+                <a th:href="@{/motoristas/update/{id}(id=${motorista.id})}" class="btn btn-primary">Alterar</a>
+                <a th:href="@{/motoristas/delete/{id}(id=${motorista.id})}" class="btn btn-danger">Deletar</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
+
+
