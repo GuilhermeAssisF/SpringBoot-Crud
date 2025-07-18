@@ -19,7 +19,6 @@ import java.util.Optional;
 @Controller
 public class MotoristaController {
 
-    // A INJEÇÃO DE DEPENDÊNCIA ESTAVA FALTANDO AQUI
     @Autowired
     private MotoristaRepository motoristaRepository;
 
@@ -27,7 +26,7 @@ public class MotoristaController {
     public String listarMotoristas(Model model) {
         List<Motorista> motoristas = motoristaRepository.findAll();
         model.addAttribute("motoristas", motoristas);
-        model.addAttribute("currentPage", "motoristas"); // Adicione esta linha
+        model.addAttribute("currentPage", "motoristas");
         return "motorista";
     }
 

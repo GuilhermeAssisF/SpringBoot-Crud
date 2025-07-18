@@ -31,13 +31,13 @@ public class UserController {
 	public String users(Model model) {
 	    List<User> users = userRepository.findAll();
 	    model.addAttribute("usuarios", users);
-	    model.addAttribute("currentPage", "users"); // Adicione esta linha
+	    model.addAttribute("currentPage", "users");
 	    return "users.html"; 
 	}
 
 	@GetMapping("/users/form")
-	public String userForm(@ModelAttribute("user") User user, Model model) { // Adicione Model
-	    model.addAttribute("currentPage", "users"); // Adicione esta linha
+	public String userForm(@ModelAttribute("user") User user, Model model) {
+	    model.addAttribute("currentPage", "users");
 	    return "user_form.html";
 	}
 	
@@ -74,7 +74,7 @@ public class UserController {
 		return "user_form.html";
 	}
 	
-	@GetMapping("/users/delete/{id}") //  <- AQUI ESTAVA @PostMapping
+	@GetMapping("/users/delete/{id}")
 	public String userDelete(@PathVariable() 
                              int id) {
 		
