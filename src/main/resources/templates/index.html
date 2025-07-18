@@ -5,16 +5,42 @@
     <title>Página Inicial - Crud Manager</title>
 </head>
 <body>
-<div class="container my-5 text-center">
-    <h1>Sistema de Gerenciamento da Transportadora</h1>
-    <p class="lead">Selecione uma opção para gerenciar:</p>
-    <div class="d-grid gap-2 col-6 mx-auto">
-        <a th:href="@{/users}" class="btn btn-primary btn-lg mb-2">Gerenciar Usuários</a>
-        <a th:href="@{/motoristas}" class="btn btn-info btn-lg mb-2">Gerenciar Motoristas</a>
-        <a th:href="@{/veiculos}" class="btn btn-success btn-lg mb-2">Gerenciar Veículos</a>
+<div th:replace="~{cabecalho :: nav}"></div>
+
+<section class="hero-section">
+    <div class="container text-center py-5">
+        <h1 class="display-5">Sistema de Gestão de Transportes</h1>
+        <p class="lead text-muted mb-5">Uma solução completa para gerenciar sua frota com eficiência.</p>
+    </div>
+</section>
+
+<div class="container my-5">
+    <h2 class="text-center mb-5">Nossos Módulos</h2>
+    <div class="row g-4 justify-content-center">
+        <div class="col-md-6 col-lg-4">
+            <a th:href="@{/users}" class="hero-card">
+                <div class="hero-icon">👤</div>
+                <h3>Gerenciar Usuários</h3>
+                <p class="text-muted">Adicione, edite e remova usuários do sistema.</p>
+            </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+            <a th:href="@{/motoristas}" class="hero-card">
+                <div class="hero-icon">🚚</div>
+                <h3>Gerenciar Motoristas</h3>
+                <p class="text-muted">Controle os dados dos motoristas da frota.</p>
+            </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+            <a th:href="@{/veiculos}" class="hero-card">
+                <div class="hero-icon">🚗</div>
+                <h3>Gerenciar Veículos</h3>
+                <p class="text-muted">Administre os veículos e suas atribuições.</p>
+            </a>
+        </div>
     </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
-
-

@@ -1,0 +1,198 @@
+/* Importa a fonte Poppins do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Variáveis de Cor para o Tema */
+:root {
+    --primary-green: #004d40; /* Verde escuro principal */
+    --secondary-green: #e0f2f1; /* Verde claro para fundos */
+    --accent-green: #00796b; /* Verde para botões e links */
+    --text-dark: #212529;
+    --text-light: #ffffff;
+    --text-muted: #6c757d;
+    --background-light: #f8f9fa;
+    --border-color: #dee2e6;
+}
+
+/* Estilos Globais */
+body {
+    background-color: var(--background-light);
+    color: var(--text-dark);
+    font-family: 'Poppins', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--primary-green);
+    font-weight: 600;
+}
+
+/* Estilos da Barra de Navegação */
+.navbar-custom {
+    background-color: var(--text-light);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-custom .navbar-brand {
+    color: var(--primary-green);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.navbar-custom .nav-link {
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link.active {
+    color: var(--accent-green);
+}
+
+/* Estilos para Cards e Painéis */
+.card-custom {
+    background-color: var(--text-light);
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+    padding: 2.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Estilos de Botão Personalizados */
+.btn-custom-primary {
+    background-color: var(--accent-green);
+    border-color: var(--accent-green);
+    color: var(--text-light);
+    font-weight: 500;
+    padding: 0.6rem 1.8rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-custom-primary:hover {
+    background-color: var(--primary-green);
+    border-color: var(--primary-green);
+    color: var(--text-light);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 121, 107, 0.2);
+}
+
+.btn-custom-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    color: var(--text-light);
+    font-weight: 500;
+    padding: 0.4rem 1.2rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-custom-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}
+
+.btn-custom-secondary {
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    color: var(--text-muted);
+    font-weight: 500;
+    padding: 0.6rem 1.8rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.btn-custom-secondary:hover {
+    background-color: var(--border-color);
+    color: var(--text-dark);
+}
+
+/* Estilos de Tabela Personalizados */
+.table-custom {
+    background-color: var(--text-light);
+    color: var(--text-dark);
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.table-custom thead th {
+    background-color: var(--secondary-green);
+    color: var(--primary-green);
+    border: none;
+    font-weight: 600;
+    padding: 1rem;
+}
+
+.table-custom tbody tr {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.table-custom tbody tr:last-child {
+    border-bottom: none;
+}
+
+.table-custom tbody td {
+    vertical-align: middle;
+    padding: 1rem;
+    color: var(--text-dark);
+}
+
+/* Estilos de Formulário Personalizados */
+.form-control-custom,
+.form-select-custom {
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    color: var(--text-dark);
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-control-custom:focus,
+.form-select-custom:focus {
+    border-color: var(--accent-green);
+    box-shadow: 0 0 0 0.25rem rgba(0, 121, 107, 0.15);
+}
+
+.form-control-custom::placeholder {
+    color: #adb5bd;
+}
+
+.form-label {
+    font-weight: 500;
+    color: var(--primary-green);
+}
+
+/* Estilos para a Página Inicial */
+.hero-section {
+    background-color: var(--secondary-green);
+    padding: 4rem 0;
+}
+
+.hero-card {
+    background-color: #ffffff;
+    border-radius: 0.75rem;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: var(--text-dark);
+    border: 1px solid var(--border-color);
+    display: block;
+    height: 100%;
+}
+
+.hero-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.hero-card h3 {
+    color: var(--accent-green);
+    margin-top: 1.5rem;
+    font-size: 1.25rem;
+}
+
+.hero-icon {
+    font-size: 3rem;
+    color: var(--primary-green);
+}
