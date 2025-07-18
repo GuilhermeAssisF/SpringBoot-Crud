@@ -27,19 +27,18 @@ public class UserController {
 	@Autowired 
 	AddressRepository addressRepository;
 	
-	// No arquivo UserController.java
 	@GetMapping("/users")
 	public String users(Model model) {
-		List<User> users = userRepository.findAll();
-		model.addAttribute("usuarios", users);
-		return "users.html"; // Mude aqui
+	    List<User> users = userRepository.findAll();
+	    model.addAttribute("usuarios", users);
+	    model.addAttribute("currentPage", "users"); // Adicione esta linha
+	    return "users.html"; 
 	}
-	
+
 	@GetMapping("/users/form")
-	public String userForm(@ModelAttribute("user") 
-	                       User user) {
-		
-		return "user_form.html";
+	public String userForm(@ModelAttribute("user") User user, Model model) { // Adicione Model
+	    model.addAttribute("currentPage", "users"); // Adicione esta linha
+	    return "user_form.html";
 	}
 	
 	@PostMapping("/users/new")

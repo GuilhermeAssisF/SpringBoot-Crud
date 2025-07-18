@@ -27,7 +27,8 @@ public class MotoristaController {
     public String listarMotoristas(Model model) {
         List<Motorista> motoristas = motoristaRepository.findAll();
         model.addAttribute("motoristas", motoristas);
-        return "motorista"; // <-- CORREÇÃO AQUI
+        model.addAttribute("currentPage", "motoristas"); // Adicione esta linha
+        return "motorista";
     }
 
 

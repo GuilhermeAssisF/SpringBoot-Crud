@@ -30,6 +30,7 @@ public class VeiculoController {
     public String veiculos(Model model) {
         List<Veiculo> veiculos = veiculoRepository.findAll();
         model.addAttribute("veiculos", veiculos);
+        model.addAttribute("currentPage", "veiculos"); // Adicione esta linha
         return "veiculo";
     }
 

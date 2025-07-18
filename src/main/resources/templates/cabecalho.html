@@ -23,16 +23,16 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" th:classappend="${#request.getRequestURI() == '/' ? 'active' : ''}" th:href="@{/}">Início</a>
+                        <a class="nav-link" th:classappend="${currentPage == 'home' ? 'active' : ''}" th:href="@{/}">Início</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" th:classappend="${#request.getRequestURI().startsWith('/users') ? 'active' : ''}" th:href="@{/users}">Usuários</a>
+                        <a class="nav-link" th:classappend="${currentPage == 'users' ? 'active' : ''}" th:href="@{/users}">Usuários</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" th:classappend="${#request.getRequestURI().startsWith('/motoristas') ? 'active' : ''}" th:href="@{/motoristas}">Motoristas</a>
+                        <a class="nav-link" th:classappend="${currentPage == 'motoristas' ? 'active' : ''}" th:href="@{/motoristas}">Motoristas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" th:classappend="${#request.getRequestURI().startsWith('/veiculos') ? 'active' : ''}" th:href="@{/veiculos}">Veículos</a>
+                        <a class="nav-link" th:classappend="${currentPage == 'veiculos' ? 'active' : ''}" th:href="@{/veiculos}">Veículos</a>
                     </li>
                 </ul>
             </div>
