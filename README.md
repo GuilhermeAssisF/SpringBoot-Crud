@@ -63,10 +63,3 @@ A seguir estão os endpoints da API disponíveis:
 Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](https://www.google.com/search?q=LICENSE) para mais detalhes.
 
 -----
-
-**Instruções para você:**
-
-1.  **Copie e cole** o texto acima em um novo arquivo chamado `README.md` na raiz do seu projeto.
-2.  **Substitua** as informações entre parênteses `()` com as informações específicas do seu projeto.
-3.  **Adicione** seções extras, se necessário (por exemplo, "Configuração do Banco de Dados", "Testes", etc.).
-4.  Faça **commit** e **push** do novo arquivo `README.md` para o seu repositório no GitHub.
