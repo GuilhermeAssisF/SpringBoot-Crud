@@ -8,11 +8,11 @@ Este repositório contém um projeto de exemplo de uma API CRUD (Create, Read, U
 
 ## Tecnologias Utilizadas
 
-  * **Java:** (Sua versão do Java, por exemplo, 17)
-  * **Spring Boot:** (Sua versão do Spring Boot)
+  * **Java
+  * **Spring Boot:** 
   * **Spring Data JPA:** Para persistência de dados
   * **Maven:** Para gerenciamento de dependências
-  * **Banco de Dados:** (Seu banco de dados, por exemplo, H2, PostgreSQL, MySQL)
+  * **Banco de Dados:** H2
 
 ## Como Executar o Projeto
 
